@@ -1,3 +1,4 @@
+import sklearn
 from sklearn.metrics.pairwise import cosine_distances
 
 import datetime
