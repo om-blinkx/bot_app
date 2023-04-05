@@ -1,9 +1,10 @@
 from ai_bricks.api import openai
 import stats
 import os
-openai.use_key(api_key_id)
-DEFAULT_USER = os.getenv('COMMUNITY_USER','')
 
+import streamlit as st
+DEFAULT_USER = os.getenv('COMMUNITY_USER','')
+openai.use_key(st.secrets["api_key_id"])
 def use_key(key):
 	
 	openai.use_key(key)
