@@ -8,7 +8,7 @@ from PIL import Image
 import streamlit as st
 st.set_page_config(layout='centered', page_title=f'{app_name} {__version__}')
 ss = st.session_state
-from streamlit_extras.app_logo import add_logo
+# from streamlit_extras.app_logo import add_logo
 # logging.info('This is an info message',type(ss['index']))
 if 'debug' not in ss: ss['debug'] = {}
 import css
@@ -340,35 +340,6 @@ def output_add(q,a):
 #         unsafe_allow_html=True,
 #     )
 # @extra
-def add_logo(logo_url: str, height: int = 120):
-    logging.info("call")
-    """Add a logo (from logo_url) on the top of the navigation page of a multipage app.
-    Taken from https://discuss.streamlit.io/t/put-logo-and-title-above-on-top-of-page-navigation-in-sidebar-of-multipage-app/28213/6
-
-    The url can either be a url to the image, or a local path to the image.
-
-    Args:
-        logo_url (str): URL/local path of the logo
-    """
-
-    # if validators.url(logo_url) is True:
-    #     logo = f"url({logo_url})"
-    # else:
-	# logo = f"url(data:image/png;base64,{base64.b64encode(Path(logo_url).read_bytes()).decode()})"
-
-    st.markdown(
-        f"""
-        <style>
-            [data-testid="stSidebarNav"] {{
-                background-image: ";
-                background-repeat: no-repeat;http://placekitten.com/200/200"
-                padding-top: {height - 40}px;
-                background-position: 20px 20px;
-            }}
-        </style>
-        """,
-        unsafe_allow_html=True,
-    )
 
 
 with st.sidebar:
@@ -376,7 +347,7 @@ with st.sidebar:
 	ui_spacer(2)
 	# add_logo()
 	with st.expander('advanced'):
-		add_logo("http://placekitten.com/200/200")
+		# add_logo("http://placekitten.com/200/200")
 		ui_show_debug()
 		b_clear()
 		ui_model()
