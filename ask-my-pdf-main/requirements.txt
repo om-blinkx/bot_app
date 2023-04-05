@@ -1,7 +1,7 @@
 git+https://github.com/mobarski/ai-bricks.git
 streamlit
 pypdf
-scikit-learn
+scikit-learn==1.2.2
 numpy
 pycryptodome
 boto3
