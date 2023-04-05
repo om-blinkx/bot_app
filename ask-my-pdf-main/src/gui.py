@@ -28,7 +28,7 @@ import os
 
 from time import time as now
 
-image = Image.open('blinkXLogoDark.jpg')
+image = Image.open('bot_app/ask-my-pdf-main/src/blinkXLogoDark.jpg')
 
 st.image(image, caption='Ask BlinkX')
 # HANDLERS
