@@ -1,7 +1,7 @@
 from ai_bricks.api import openai
 import stats
 import os
-openai.use_key(api_key)
+openai.use_key(api_key_id)
 DEFAULT_USER = os.getenv('COMMUNITY_USER','')
 
 def use_key(key):
