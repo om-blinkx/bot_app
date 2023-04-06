@@ -17,7 +17,7 @@ def set_user(user):
 	openai.add_callback('after', stats_callback)
 
 def complete(text, **kw):
-	use_key(key="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")
+	use_key(key=st.secrets["api_key_id"])
 	model = kw.get('model','gpt-3.5-turbo')
 	llm = openai.model(model)
 	llm.config['pre_prompt'] = 'output only in raw text' # for chat models
