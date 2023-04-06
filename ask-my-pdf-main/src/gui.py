@@ -34,7 +34,7 @@ st.image(image, caption='Ask BlinkX')
 # HANDLERS
 
 def on_api_key_change():
-	api_key = "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"
+	api_key = st.secrets["api_key_id"]
 	# ss.get('api_key') or os.getenv('OPENAI_KEY')
 	model.use_key(api_key) # TODO: empty api_key
 	#
